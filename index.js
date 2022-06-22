@@ -20,7 +20,7 @@ function verifyJWT(req,res, next){
        if(err){
         return res.status(403).send({message: "forbidden access"})
        } 
-       console.log('decoded', decoded);
+    //    console.log('decoded', decoded);
        req.decoded = decoded;
        next()
     }) 
@@ -107,10 +107,17 @@ async function run(){
 }
 run().catch(console.dir);
 
+// change kore new deploy kore check korbo
+app.get('/hero', (req, res) =>{
+    res.send('hero meet hero ku')
+});
+
 
 app.get('/', (req, res) =>{
     res.send('Genius car services port is running')
 });
+
+
 
 app.listen(port, () =>{
     console.log('Listening to port', port)
