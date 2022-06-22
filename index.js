@@ -109,7 +109,7 @@ run().catch(console.dir);
 
 // change kore new deploy kore check korbo
 app.get('/hero', (req, res) =>{
-    res.send('hero meet hero ku')
+    res.send('hero meet hero ku ...!')
 });
 
 
